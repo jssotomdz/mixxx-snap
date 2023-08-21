@@ -11,6 +11,10 @@ environment:
   LD_LIBRARY_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET:$SNAP/usr/lib:$SNAP/usr/lib/dri${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
   ALSA_CONFIG_PATH: $SNAP/usr/share/alsa/alsa.conf
 
+compression: lzo
+architectures:
+  - build-on: amd64
+
 package-repositories:
  - type: apt
    ppa: mixxx/mixxx
